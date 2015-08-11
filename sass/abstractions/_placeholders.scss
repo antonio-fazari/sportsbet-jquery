@@ -1,0 +1,95 @@
+%content-padding {
+  padding: 15px;
+  @include breakpoint($phab) {
+    padding: 20px;
+  }
+  @include breakpoint($desk) {
+    padding: 30px;
+  }
+}
+
+%table-row-padding {
+  padding: 10px 15px;
+  @include breakpoint($phab) {
+    padding: 10px 20px;
+  }
+  @include breakpoint($desk) {
+    padding: 10px 30px;
+  }
+}
+
+%h1 {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+
+  @include breakpoint($tab) {
+    text-align: left;
+    font-size: 36px;
+  }
+}
+
+%h2 {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+%h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+%h4 {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: normal;
+}
+
+%legend {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+%label {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  font-weight: normal !important;
+  margin: 5px 0;
+  text-transform: uppercase;
+  color: $black;
+}
+
+%textfield {
+  @include inline-block;
+  border: 1px solid $black;
+  outline: none;
+  width: 400px;
+  max-width: 100%;
+  resize: none;
+  padding: 9px 14px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+%select {
+  background: white;
+  width: 290px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid $border-grey;
+  border-radius: 0;
+  height: 34px;
+  margin-bottom: 25px;
+}

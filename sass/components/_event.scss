@@ -1,0 +1,51 @@
+.event {
+	margin-bottom: 10px;
+	background-color: $white;
+	border: 1px solid $border-grey;
+}
+
+.event__header {
+	@extend %content-padding;
+	background-color: $dark-blue;
+	color: $white;
+
+	h2 {
+		margin: 10px 0 15px;
+	}
+
+	span {
+		display: block;
+		margin-right: 30px;
+
+		@include breakpoint($phab) {
+			font-size: 16px;
+		}
+	}
+}
+
+.event__runners {
+	table {
+		width: 100%;
+		th {
+			text-align: left;
+			background-color: $light-blue;
+			color: $white;
+			font-weight: normal;
+			font-size: 16px;
+			@extend %table-row-padding;
+		}
+		tr {
+			&.odd {
+				background-color: $hover-grey;
+			}
+		}
+		td {
+			@extend %table-row-padding;
+
+			&.event-runner-odds {
+				text-align: right;
+				border-left: 1px solid $border-grey;
+			}
+		}
+	}
+}

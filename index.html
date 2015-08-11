@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sportsbet - Horse Racing Odds</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/moment.min.js"></script>
+        <script src="js/vendor/handlebars-v2.0.0.js"></script>
+    </head>
+    <body>
+        <!-- Add your site or application content here -->
+        <header class="l-header">
+            <div class="logo"></div>
+        </header>
+        <div class="l-main">
+            <h1 class="title">Horse Racing Odds</h1>
+            <h2 class="subtitle"></h2>
+            <select id="venue-filter">
+                <option value="default">- Filter by venue -</option>
+                <option value="all">All Venues</option>
+            </select>
+            <span class="message">Loading...</span>
+            <div id="events">
+                <script id="events-template" type="text/x-handlebars-template">
+                {{#each events}}
+                <div class="event">
+                    <div class="event__header">
+                        <h2 class="event-name">{{eventName}}</h2>
+                        <h3 class="event-venue">{{eventVenue}}</h3>
+                        <span class="event-date">{{eventDate}}</span>
+                        <span class="event-market-type">{{eventMarketType}}</span>
+                        <span class="event-jump-time" data-utc-date="{{eventUtcDate}}">
+                            {{eventTime}}
+                        </span>
+                    </div>
+                    <div class="event__runners">
+                        <table class="event-runner">
+                            <tr>
+                                <th>Runners</th>
+                                <th>Odds</th>
+                            </tr>
+                            {{#each runners}}
+                            <tr class="{{rowClass}}">
+                                <td class="event-runner-name">{{eventRunnerName}}</td>
+                                <td class="event-runner-odds">{{eventRunnerOdds}}</td>
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </div>
+                </div>
+                {{/each}}
+                </script>
+            </div>
+        </div>
+        <footer class="l-footer">Copyright &copy Sportsbet Technical Test</footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/parser.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

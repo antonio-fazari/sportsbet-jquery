@@ -1,0 +1,38 @@
+// Fonts families.
+$arial: Arial, Helvetica, sans-serif;
+
+body {
+  font-family: $arial;
+  color: black;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+a {
+  color: $dark-blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  @extend %h1;
+}
+h2 {
+  @extend %h2;
+
+  &.subtitle {
+    text-align: center;
+    @include breakpoint($tab) {
+      text-align: left;
+    }
+  }
+}
+h3 {
+  @extend %h3;
+}
+h4 {
+  @extend %h4;
+}
